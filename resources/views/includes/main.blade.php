@@ -1,7 +1,12 @@
 <main>
     <section id="comics-list" class="upper-content">
         <div class="container card-container">
-            
+            @foreach ($comics as $comic)
+                <div class="comics-card">
+                    <img class="comic-image" src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+                    <h1>{{ $comic['series'] }}</h1>
+                </div>
+            @endforeach
         </div>
     </section>
     <section class="lower-content">

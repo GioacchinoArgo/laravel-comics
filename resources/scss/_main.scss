@@ -6,8 +6,28 @@ main {
     background-color: $darkgray;
     padding: 4rem 0;
 
-    h1 {
-        font-size: 30px;
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+
+        .comics-card {
+            flex-basis: calc(100% / 6);
+            padding: 20px;
+
+            .comic-image {
+                height: 300px;
+                object-fit: cover;
+
+            }
+
+            h1 {
+                font-size: 20px;
+                margin-top: 15px;
+            }
+        }
     }
 }
 
@@ -41,16 +61,5 @@ main {
                 margin-right: 10px;
             }
         }
-    }
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-
-    .comics-card {
-        flex-basis: 15%;
-
     }
 }
