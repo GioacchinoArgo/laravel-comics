@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ env('APP_NAME', 'Comics')}}</title>
 
-                        {{-- ?????????? --}}
-
     <link rel="icon" href="{{ asset('img/dc-logo.png') }}">
 
     {{-- Vite --}}
@@ -15,10 +13,13 @@
 </head>
 <body>
 
+    {{-- Header --}}
     @include('includes.header')
 
+    {{-- Main --}}
     @include('includes.main')
 
+    {{-- Footer --}}
     @include('includes.footer')
 </body>
 </html>
