@@ -3,6 +3,18 @@
 @section('title', 'Comics')
 
 @section('main-content')
+<section id="comics-list" class="upper-content">
+    <div class="container card-container">
+        @foreach ($comics as $index => $comic)
+            <div class="comics-card">
+                <a href="{{ route('show', $index) }}">
+                    <img class="comic-image" src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+                    <h1>{{ $comic['series'] }}</h1>
+                </a>
+            </div>
+        @endforeach
+    </div>
+</section>
 <section class="lower-content">
     <div class="container">
         <ul>
@@ -14,5 +26,4 @@
         </ul>
     </div>
 </section>
-
 @endsection

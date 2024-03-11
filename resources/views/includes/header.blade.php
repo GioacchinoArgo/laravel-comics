@@ -4,9 +4,9 @@
     </figure>
     <nav>
         <ul>
-            <li><a>characters</a></li>
-            <li><a>comics</a></li>
-            <li><a>movies</a></li>
+            <li><a href="{{ url('/')}}" class=" {{ request()->routeIs('home') ? 'active' : '' }}">home</a></li>
+            <li><a href="{{ url('/comics')}}" class=" {{ request()->routeIs('comics') ? 'active' : '' }}">comics</a></li>
+            <li><a href="{{ route('movies')}}" class=" {{ request()->routeIs('movies') ? 'active' : '' }}">movies</a></li>
             <li><a>tv</a></li>
             <li><a>games</a></li>
             <li><a>Collectibles</a></li>
@@ -17,3 +17,4 @@
         </ul>
     </nav>
 </header>
+<div class="jumbotron"></div>
